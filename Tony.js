@@ -111,4 +111,38 @@ ${message.content}`)
     }
         })
 
+
+
+const Discord = require('discord.js')
+
+module.exports.run = async (Client, message, args, prefix) => {
+    if(!message.content.startsWith(prefix)) return
+    const messageArray = message.content.split(' ');
+    const args = messageArray.slice(1);
+        if(!message.member.hasPermission('MANAGE_MESSAGES')) 
+        return message.channel.send("You need `MANAGE_MESSAGES` permission to execute this command.");
+  
+      message.channel.setRateLimitPerUser(args[0]);
+    message.channel.send(`Slowmode has been set to: ${args[0]} Seconds`)
+}
+  
+module.exports.help = {
+    name: "slowmode",
+    description: "Changes the slowmode of a channel",
+    aliases: ['sm']
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.login("");
