@@ -117,7 +117,7 @@ const Discord = require('discord.js')
 
 module.exports.run = async (Client, message, args, prefix) => {
     if(!message.content.startsWith(prefix)) return
-    const messageArray = message.content.split('+wara');
+    const messageArray = message.content.split(' ');
     const args = messageArray.slice(1);
         if(!message.member.hasPermission('MANAGE_MESSAGES')) 
         return message.channel.send("You need `MANAGE_MESSAGES` permission to execute this command.");
