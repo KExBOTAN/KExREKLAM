@@ -92,7 +92,7 @@ client.on("message", msg => {
 });
 /////Reklam////
 client.on('ready' , () => {
-var join = client.channels.get("id voice")/// ئاید ڤۆیس
+var join = client.channels.get("873264888506626048")/// ئاید ڤۆیس
 if (join) join.join()
 })
 
@@ -102,9 +102,9 @@ if(message.channel.type === 'dm') {
  
 if (message.content.startsWith("https://discord.gg/")) {
  
-  message.author.send(`> link server`)/// لینکە سیرڤەرە خۆت
+  message.author.send(`> link https://discord.gg/C2B777b2SV`)/// لینکە سیرڤەرە خۆت
  
-  client.channels.get("id text").send(
+  client.channels.get("873264869628059688").send(
 `> Nerdra la layan <@${message.author.id}> 
 ${message.content}`)
 }
@@ -117,7 +117,7 @@ const Discord = require('discord.js')
 
 module.exports.run = async (Client, message, args, prefix) => {
     if(!message.content.startsWith(prefix)) return
-    const messageArray = message.content.split(' ');
+    const messageArray = message.content.split('+wara');
     const args = messageArray.slice(1);
         if(!message.member.hasPermission('MANAGE_MESSAGES')) 
         return message.channel.send("You need `MANAGE_MESSAGES` permission to execute this command.");
@@ -145,4 +145,4 @@ module.exports.help = {
 
 
 
-client.login("");
+client.login("ODczODc3MjI4NTgzMjcyNDc4.YQ-zlw.E0JQXCTvDtkFExnqhEUWFNXx0Q4");
